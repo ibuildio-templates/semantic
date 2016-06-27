@@ -1,5 +1,5 @@
 /*
-| App main javascript file.
+| {{ name }} : {{ description }}
 |
 | @link      http://websemantics.ca
 | @author    Web Semantics, Inc. Dev Team <team@websemantics.ca>

@@ -1,0 +1,6 @@
+public
+semantic
+node_modules
+npm-debug.log
+semantic.json
+.DS_Store

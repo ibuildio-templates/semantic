@@ -15,7 +15,7 @@
       "message": "Deploy to gh-pages"
     },
     "dir": {
-      "docs": "./docs"
+      "docs": "./docs/"
     }
   },
   "scripts": {
@@ -25,6 +25,7 @@
     "deploy:docs:local": "repository=$(echo $npm_package_repository_url | sed 's/.*+//') && cd ${npm_package_config_dir_docs}_book && git push --force --quiet $repository ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
     "deploy:docs:travis": "cd ${npm_package_config_dir_docs}_book && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
     "predeploy:docs": "npm run build:docs -s && cd ${npm_package_config_dir_docs}_book && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
+    "postdeploy:docs": "npm run prebuild:docs -s",
     "serve:docs": "cd $npm_package_config_dir_docs && gitbook serve"
   },
   "ibuild": {

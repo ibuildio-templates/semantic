@@ -21,7 +21,7 @@
      },
     "unit": {
       "type": "confirm",
-      "message": "copy source files"
+      "message": "Copy source files"
     }
    },
    "filters": {

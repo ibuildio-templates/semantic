@@ -1,0 +1,53 @@
+{
+  "name": "ibuildio-template-semantic",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Generic template based on semantic-ui framework with powerful npm based build scripts.",
+  "repository": {
+    "type": "git",
+    "url": "ibuildio-templates/semantic.git"
+  },
+  "config": {
+    "deploy": {
+      "name": "iAyeBot",
+      "email": "iayebot@websemantics.ca",
+      "branch": "master:gh-pages",
+      "message": "Deploy to gh-pages"
+    },
+    "dir": {
+      "docs": "./docs"
+    }
+  },
+  "scripts": {
+    "build:docs": "cd $npm_package_config_dir_docs && gitbook build",
+    "prebuild:docs": "rm -rf ${npm_package_config_dir_docs}_book ",
+    "deploy:docs": "[ ${GH_TOKEN} ] && npm run deploy:docs:travis -s || npm run deploy:docs:local -s ",
+    "deploy:docs:local": "repository=$(echo $npm_package_repository_url | sed 's/.*+//') && cd ${npm_package_config_dir_docs}_book && git push --force --quiet $repository ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
+    "deploy:docs:travis": "cd ${npm_package_config_dir_docs}_book && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
+    "predeploy:docs": "npm run build:docs -s && cd ${npm_package_config_dir_docs}_book && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
+    "serve:docs": "cd $npm_package_config_dir_docs && gitbook serve"
+  },
+  "ibuild": {
+    "schema": {
+       "name": {
+         "type": "string",
+         "label": "App name",
+         "required": true
+       },
+       "description": {
+         "type": "string",
+         "label": "App description",
+         "default": "An ibuild.io app",
+         "required": true
+       },
+       "author": {
+         "type": "string",
+         "label": "Author"
+       },
+       "private": {
+         "type": "boolean",
+         "default": true
+       }
+     }
+  }
+}

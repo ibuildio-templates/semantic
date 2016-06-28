@@ -1,12 +1,14 @@
 {
   "static": {
-    "company": "{{ company }}",
+    "src": "./src/html/",
+    "dist": "./public/",
     "template": {
       "engine": "handlebars",
       "default": "layout.html",
       "directory": "./src/template/",
       "partials": "./src/template/partials/"
     },
+    "company": "{{ company }}",
     "collections": {
       "page": {}
     }

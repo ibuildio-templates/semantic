@@ -8,7 +8,7 @@
      "description": {
        "label": "Description",
        "type": "string",
-       "default": "Generic site template",
+       "default": "Generic project template",
        "required": true
      },
      "author": {

@@ -34,7 +34,7 @@
     "build": "npm run copy -s && npm run build:js -s && npm run build:css -s && npm run build:html -s && npm run build:cname -s ",
     "build:clean": "rm -rf $npm_package_config_dir_dist ",
     "build:init": "mkdir -p ${npm_package_config_dir_dist}js && mkdir -p ${npm_package_config_dir_dist}css",
-    "build:html": "node ${npm_package_config_dir_src}lib/build.js ",
+    "build:html": "ibuild static ",
     "build:cname": "[ ${npm_package_config_domain} ] && echo $npm_package_config_domain > \"${npm_package_config_dir_dist}CNAME\" || echo '' ",
     "build:css": "[ \"$npm_package_config_minify\" = \"true\" ] &&  npm run build:css:minify -s || npm run build:css:default -s ",
     "build:css:default": "lessc ${npm_package_config_dir_src}less/index.less ${npm_package_config_dir_dist}css/styles.css ",

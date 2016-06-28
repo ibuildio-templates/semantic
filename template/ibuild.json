@@ -1,6 +1,14 @@
 {
-  "company": "{{ company }}",
-  "collections": {
-    "page": {}
+  "static": {
+    "company": "{{ company }}",
+    "template": {
+      "engine": "handlebars",
+      "default": "layout.html",
+      "directory": "./src/template/",
+      "partials": "./src/template/partials/"
+    },
+    "collections": {
+      "page": {}
+    }
   }
 }

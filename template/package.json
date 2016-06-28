@@ -29,12 +29,6 @@
       "src": "./src/",
       "html": "./src/html/",
       "dist": "./public/"
-    },
-    "template": {
-      "engine": "handlebars",
-      "default": "layout.html",
-      "directory": "./src/template/",
-      "partials": "./src/template/partials/"
     }
   },
   "scripts": {

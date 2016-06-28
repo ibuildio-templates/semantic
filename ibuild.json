@@ -1,19 +1,29 @@
 {
   "prompts": {
      "name": {
+       "label": "Name",
        "type": "string",
-       "label": "App name",
        "required": true
      },
      "description": {
+       "label": "Description",
        "type": "string",
-       "label": "App description",
-       "default": "An ibuild.io app",
+       "default": "Generic site template",
        "required": true
      },
      "author": {
        "type": "string",
        "label": "Author"
+     },
+     "username": {
+       "type": "string",
+       "label": "Githib Username",
+       "default": "websemantics"
+     },
+     "company": {
+       "type": "string",
+       "label": "Company",
+       "default": "Web Semantics, Inc."
      },
      "private": {
        "type": "boolean",

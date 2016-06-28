@@ -1,14 +1,14 @@
 {
   "name": "{{ name }}",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "{{ description }}",
-  "homepage": "https://github.com/websemantics/{{ name }}",
-  "main": "lib/build.js",
+  "homepage": "https://github.com/{{ username }}/{{ name }}",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "websemantics/{{ name }}.git"
+    "url": "{{ username }}/{{ name }}.git"
   },
-  "company": "Web Semantics, Inc.",
+  "company": "{{ company }}",
   "collections": {
     "page": {}
   },
@@ -78,7 +78,7 @@
     "test": "echo 'Error: no test specified' && exit 1 "
   },
   "bugs": {
-    "url": "https://github.com/websemantics/{{ name }}/issues"
+    "url": "https://github.com/{{ username }}/{{ name }}/issues"
   },
   "keywords": [
     "node.js",

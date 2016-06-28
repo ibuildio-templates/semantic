@@ -11,10 +11,6 @@
     "type": "git",
     "url": "{{ username }}/{{ name }}.git"
   },
-  "company": "{{ company }}",
-  "collections": {
-    "page": {}
-  },
   "config": {
     "minify": false,
     "deploy": {

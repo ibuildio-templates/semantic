@@ -1,0 +1,6 @@
+{
+  "company": "{{ company }}",
+  "collections": {
+    "page": {}
+  }
+}

@@ -1,5 +1,6 @@
-# {{ name }}
-
+```
+{{ figlet name }}
+```
 > {{ description }}
 
 ## Scripts

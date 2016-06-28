@@ -4,6 +4,9 @@
   "description": "{{ description }}",
   "homepage": "https://github.com/{{ username }}/{{ name }}",
   "main": "index.js",
+  {{#private}}
+  "private": true,
+  {{/private}}
   "repository": {
     "type": "git",
     "url": "{{ username }}/{{ name }}.git"

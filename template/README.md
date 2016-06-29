@@ -3,6 +3,8 @@
 ```
 > {{ description }}
 
+## [Live](https://{{username}}.github.io/{{name}})
+
 ## Scripts
 
 List of useful scripts to help build and deploy your app.
@@ -10,7 +12,7 @@ List of useful scripts to help build and deploy your app.
 - `npm run build`: build the project
 - `npm run build:html`: build html files from markdown (minify is set by the user)
 - `npm run build:css`: build css/less only (minify is set by the user)
-- `npm run build:js`: build javscript only (minify is set by the user)
+- `npm run build:js`: build javascript only (minify is set by the user)
 - `npm run build:cname`: generate CNAME file if a domain is defined
 - `npm run build:development`: build for development environment
 - `npm run build:production`: build for production environment

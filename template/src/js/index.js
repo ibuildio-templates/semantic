@@ -23,6 +23,6 @@ $(function() {
               dimPage: false
           })
 
-      var masonry = new Masonry( '.masonry', { "itemSelector": ".brick"})
+      // var masonry = new Masonry( '.masonry', { "itemSelector": ".brick"})
 
 })

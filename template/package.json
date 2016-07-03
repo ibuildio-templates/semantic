@@ -97,7 +97,7 @@
     "parallelshell": "*"
   },
   "dependencies": {
-    "masonry-layout": "*",
+    "masonry-plus": "*",
     "google-code-prettify": "*",
     "handlebars": "^4.0.5",
     "jquery": "^2.1.4"

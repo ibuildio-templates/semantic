@@ -171,18 +171,23 @@ svg.logo {
       margin: 0;
       padding-left: 10px;
   }
+  & > .container {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100% !important;
+      max-width: none !important;
+      & > .launch.item {
+        display: @mainMenuLaunchDisplay!important;
+      }
+  }
   @media only screen and (min-width: @wideResolution /* i.e. 1200px */) {
-    &, &.placeholder{
+    display: @mainMenuFullDisplay!important;
+    &.placeholder{
       display: none!important;
     }
   }
   @media only screen and (max-width: @wideResolution /* i.e. 1200px */) {
-    & > .container {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: 100% !important;
-        max-width: none !important;
-    }
+    /* add custom styles */
   }
   @media only screen and (max-width: @narrowResolution) {
       .header.title {

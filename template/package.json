@@ -40,7 +40,6 @@
     "build:css:default": "lessc ${npm_package_config_dir_src}less/index.less ${npm_package_config_dir_dist}css/styles.css ",
     "build:css:minify": "lessc ${npm_package_config_dir_src}less/index.less | uglifycss > \"${npm_package_config_dir_dist}css/styles.css\" ",
     "build:js": "[ \"$npm_package_config_minify\" = \"true\" ] && npm run build:js:minify -s || npm run build:js:default -s ",
-    "build:webpack": "node_modules/.bin/webpack ",
     "build:js:default": "browserify ${npm_package_config_dir_src}js/index.js -o ${npm_package_config_dir_dist}js/index.js ",
     "build:js:minify": "browserify ${npm_package_config_dir_src}js/index.js | uglifyjs -mc > \"${npm_package_config_dir_dist}js/index.js\" ",
     "build:development": "cross-env NODE_ENV=development npm run build ",
@@ -79,17 +78,23 @@
   "author": "{{ author }}",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-runtime": "^6.0.0",
+    {{#vue}}
+    "babelify": "^7.2.0",
+    "proxyquireify": "^3.0.1",
+    "vueify": "^8.5.2"
+    {{/vue}}
     "less": "*",
     "uglifycss": "*",
     "uglifyjs": "*",
-    "babel-core": "^6.0.0",
-    "babel-preset-es2015": "^6.0.0",
-    "babelify": "^7.2.0",
-    "browserify": "^13.0.1",
+    "browserify": "^12.0.1",
     "browserify-hmr": "^0.3.1",
     "cross-env": "^1.0.6",
     "http-server": "^0.9.0",
-    "vueify": "^9.1.0",
     "nodemon": "*",
     "http-server": "*",
     "live-reload": "*",
@@ -100,12 +105,17 @@
     "masonry-plus": "*",
     "google-code-prettify": "*",
     "handlebars": "^4.0.5",
+    {{#vue}}
+    "vue": "^1.0.0",
+    {{/vue}}
     "jquery": "^2.1.4"{{ dependencies }}
 
   },
   "browserify": {
     "transform": [
+      {{#vue}}
       "vueify",
+      {{/vue}}
       "babelify"
     ]
   }

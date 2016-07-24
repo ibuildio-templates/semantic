@@ -28,6 +28,10 @@
      "private": {
        "type": "boolean",
        "default": true
+     },
+     "vue": {
+       "type": "boolean",
+       "default": false
      }
    }
 }

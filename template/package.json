@@ -86,7 +86,7 @@
     {{#vue}}
     "babelify": "^7.2.0",
     "proxyquireify": "^3.0.1",
-    "vueify": "^8.5.2"
+    "vueify": "^8.5.2",
     {{/vue}}
     "less": "*",
     "uglifycss": "*",

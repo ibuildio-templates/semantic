@@ -95,28 +95,30 @@ svg.logo {
     font-family: @secondFontName;
     &.vertical {
         background-color: @sidebarBackgroundColor;
-        div {
-            padding: 4rem 0 3rem;
-            text-align: center;
-            float: none;
-            width: auto;
-            overflow: hidden;
-            background: @footerBackgroundColor;
-            &:first-child {
-                width: @sidebarWidth;
-                float: left;
-                background-color: @sidebarBackgroundColor;
-                @media only screen and (max-width: @wideResolution) {
-                    & { /* hide toc side of the footer */
-                        display: none!important;
-                    }
-                }
-            }
-            &:first-child when (@footerFullWide) {
-                /* hide left side of the footer when full width */
-                display: none!important;
-            }
+        div{
+          padding: 4rem 0 3rem;
+          text-align: center;
+          float: none;
+          width: auto;
+          overflow: hidden;
+          background: @footerBackgroundColor;
         }
+        div when not (@footerFreeStyle){
+          &:first-child {
+              width: @sidebarWidth;
+              float: left;
+              background-color: @sidebarBackgroundColor;
+              @media only screen and (max-width: @wideResolution) {
+                  & { /* hide toc side of the footer */
+                      display: none!important;
+                  }
+              }
+          }
+          &:first-child when (@footerFullWide) {
+              /* hide left side of the footer when full width */
+              display: none!important;
+          }
+      }
     }
     .heart {
         vertical-align: middle;
@@ -180,7 +182,7 @@ svg.logo {
     border: 1px solid #DDD;
     box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
   }
-  .item .logo {
+  .item img.logo {
     margin-right: 1.5em;
   }
   .header.title {

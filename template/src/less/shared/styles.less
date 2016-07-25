@@ -96,14 +96,14 @@ svg.logo {
     &.vertical {
         background-color: @sidebarBackgroundColor;
         div{
-          padding: 4rem 0 3rem;
-          text-align: center;
+          padding: @footerDivPadding;
           float: none;
-          width: auto;
           overflow: hidden;
           background: @footerBackgroundColor;
         }
         div when not (@footerFreeStyle){
+          text-align: center;
+          width: auto;
           &:first-child {
               width: @sidebarWidth;
               float: left;

@@ -167,13 +167,29 @@ svg.logo {
 /************************** [ main menu module] **************************/
 .ui.menu.main {
   border: 0!important;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: @mainMenuBackground;
+  transition:
+    box-shadow 0.5s ease,
+    padding 0.5s ease
+  ;
+  &.fixed {
+    background-color: @mainMenuFixedBackground;
+    border: 1px solid #DDD;
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  }
+  .item img.logo {
+    margin-right: 1.5em;
+  }
   .header.title {
       margin: 0;
       padding-left: 10px;
   }
   & > .container {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
+      margin-left: @mainMenuContainerMarginLeft!important;
+      margin-right: @mainMenuContainerMarginRight!important;
       width: 100% !important;
       max-width: none !important;
       & > .launch.item {

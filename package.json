@@ -1,8 +1,8 @@
 {
-  "name": "ibuildio-template-semantic",
+  "name": "ibuildio-template-semantic-browserify",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "Generic template based on semantic-ui framework with powerful npm based build scripts.",
+  "description": "Generic template based on semantic-ui framework & browserify with powerful npm based build scripts.",
   "author": "Adnan M.Sagar, PhD.",
   "repository": {
     "type": "git",

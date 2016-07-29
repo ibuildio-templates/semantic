@@ -1,3 +1,3 @@
 # Documentation
 
-This is a generic template that uses Semantic-ui, Browserify and an npm build scripts to build apps.
+> Generic template based on [semantic-ui](http://semantic-ui.com/) framework and [Browserify](http://browserify.org/) with powerful npm based build scripts.

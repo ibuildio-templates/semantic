@@ -6,7 +6,7 @@
 /____/\___/_/ /_/ /_/\__,_/_/ /_/\__/_/\___/  /_____/_/   \____/|__/|__/____/\___/_/  /_/_/  \__, /  
                                                                                   Template  /____/   
 ```
-> Generic template based on [semantic-ui](http://semantic-ui.com/) framework and [Browserify](http://browserify.org/) with powerful npm based build scripts.
+> Generic template based on [Semantic-ui](http://semantic-ui.com/) framework and [Browserify](http://browserify.org/) with powerful npm based build scripts.
 
 
 ## Install

@@ -103,7 +103,7 @@
   },
   "dependencies": {
     "masonry-plus": "*",
-    "google-code-prettify": "*",
+    "prismjs": "^1.5.1",
     "handlebars": "^4.0.5",
     {{#vue}}
     "vue": "^1.0.0",
